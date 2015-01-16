@@ -1,0 +1,127 @@
+!Xft
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+#define K_bg #1b1b1b
+#define K_fg #f7f7f7
+#define K_bold #ffffff
+#define K_cursor #bbbbbb
+#define K_cursor_text #ffffff
+#define K_hilite #207483
+#define K_hilite_text #f7f7f7
+
+#define K_black #000000
+#define K_brblack #7a7a7a
+#define K_red #b84131
+#define K_brred #d6837c
+#define K_green #7da900
+#define K_brgreen #c4f137
+#define K_yellow #c4a500
+#define K_bryellow #fee14d
+#define K_blue #62a3c4
+#define K_brblue #8dcff0
+#define K_magenta #ba8acc
+#define K_brmagenta #f79aff
+#define K_cyan #207383
+#define K_brcyan #6ad9cf
+#define K_white #a1a1a1
+#define K_brwhite #f7f7f7
+
+*color0:                  K_black
+*color1:                  K_red
+*color2:                  K_green
+*color3:                  K_yellow
+*color4:                  K_blue
+*color5:                  K_magenta
+*color6:                  K_cyan
+*color7:                  K_white
+*color8:                  K_brblack
+*color9:                  K_brred
+*color10:                 K_brgreen
+*color11:                 K_bryellow
+*color12:                 K_brblue
+*color13:                 K_brmagenta
+*color14:                 K_brcyan
+*color15:                 K_brwhite
+
+Xcursor.theme: gentoo
+Xcursor.size: 24
+!Xterm
+XTerm*background: K_bg
+XTerm*foreground: K_fg
+XTerm*fading: 40
+XTerm*fadeColor: K_black
+XTerm*cursorColor: K_cursor_text
+Xterm*pointerColor: K_cursor
+Xterm*highlightTextColor: K_hilite_text
+Xterm*highlightColor: K_hilite
+XTerm*termName: xterm-256color
+XTerm*locale: true
+XTerm*metaSendEscape: true
+XTerm*saveLines: 4096
+XTerm*scrollBar: true
+XTerm*thickness: 3
+XTerm*faceName: Code New Roman:size=10:antialias=false
+XTerm*faceNameDoubleSize: Code New Roman:size=10:antialias=false
+XTerm*VT100.geometry: 80x25
+XTerm*VT100.allowBoldFont: true
+XTerm*VT100.allowScrollLock: true
+
+!URxvt
+URxvt.depth: 32
+URxvt.background: K_bg
+URxvt.foreground: K_fg
+URxvt.cursorColor: K_cursor_text
+!URxvt.borderColor:
+URxvt.borderLess: true
+URxvt.colorBD: K_bold
+!URxvt.colorIT: K_magenta
+!URxvt.colorUL: K_bryellow
+URxvt.iconFile: /usr/share/icons/Square-Beam/apps/scalable/xterm-color.svg
+URxvt.geometry: 80x25
+URxvt.visualBell: false
+URxvt.cursorBlink: true
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: true
+URxvt.scrollColor: K_yellow
+URxvt.scrollstyle: plain
+URxvt.thickness: 3
+URxvt.scrollTtyOutput: false
+URxvt.scrollTtyKeypress: true
+URxvt.scrollWithBuffer: true
+URxvt.saveLines: 4096
+URxvt.termName: rxvt-unicode-256color
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
+URxvt.font: xft:Code New Roman:antialias=false:size=10
+URxvt.boldFont: xft:Code New Roman:bold:antialias=false:size=10
+!URxvt.italicFont:
+!URxvt.boldItalicFont:
+!URxvt.inputMethod:
+!URxvt.imFont:
+!URxvt.imLocale:
+URxvt.perl-ext-common: default,matcher
+!URxvt.perl-ext: default,url-select,font-size
+
+!Matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+!url-select
+!URxvt.keysym.M-u: perl:url-select:select_next
+!URxvt.url-select.launcher: /usr/bin/xdg-open
+!URxvt.url-select.underline: true
+
+!font-size
+!URxvt.font-size.step: 1
+!URxvt.keysym.C-Up: perl:font-size:increase
+!URxvt.keysym.C-Down: perl:font-size:decrease
+!URxvt.keysym.C-S-Up: perl:font-size:incglobal
+!URxvt.keysym.C-S-Down: perl:font-size:decglobal
+!URxvt.keysym.C-slash: perl:font-size:reset

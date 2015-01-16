@@ -9,10 +9,6 @@
 (setq-default major-mode 'text-mode)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
-;; Auto complete thingy
-;;(require 'auto-complete-autoloads)
-;;(autoload 'auto-complete "auto-complete" nil t)
-
 ;; Haskell thingy
 (require 'flymake-haskell-multi)
 (autoload 'ghc-init "ghc" nil t)
@@ -21,10 +17,13 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+(eval-after-load 'haskell-mode
+  '(define-key haskell-mode-map [f8] 'haskell-navigate-imports))
 
 ;; Jekyll
 (add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))
+
 ;; slime
 (require 'slime-autoloads)
 (setq inferior-lisp-program "/usr/bin/sbcl")
@@ -35,6 +34,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(haskell-tags-on-save t)
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
