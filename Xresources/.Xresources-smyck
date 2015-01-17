@@ -73,7 +73,7 @@ XTerm*VT100.allowBoldFont: true
 XTerm*VT100.allowScrollLock: true
 
 !URxvt
-URxvt.depth: 32
+!URxvt.depth: 32
 URxvt.background: K_bg
 URxvt.foreground: K_fg
 URxvt.cursorColor: K_cursor_text
