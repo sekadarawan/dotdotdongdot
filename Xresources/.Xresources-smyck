@@ -66,8 +66,8 @@ XTerm*metaSendEscape: true
 XTerm*saveLines: 4096
 XTerm*scrollBar: true
 XTerm*thickness: 3
-XTerm*faceName: Code New Roman:size=10:antialias=false
-XTerm*faceNameDoubleSize: Code New Roman:size=10:antialias=false
+XTerm*faceName: DejaVu Sans Mono:size=10:antialias=false
+XTerm*faceNameDoubleSize: DejaVu Sans Mono:size=10:antialias=false
 XTerm*VT100.geometry: 80x25
 XTerm*VT100.allowBoldFont: true
 XTerm*VT100.allowScrollLock: true
@@ -99,8 +99,8 @@ URxvt.saveLines: 4096
 URxvt.termName: rxvt-unicode-256color
 URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
-URxvt.font: xft:Code New Roman:antialias=false:size=10
-URxvt.boldFont: xft:Code New Roman:bold:antialias=false:size=10
+URxvt.font: xft:DejaVu Sans Mono:antialias=false:size=10
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:antialias=false:size=10
 !URxvt.italicFont:
 !URxvt.boldItalicFont:
 !URxvt.inputMethod:
