@@ -78,12 +78,12 @@ URxvt.background: K_bg
 URxvt.foreground: K_fg
 URxvt.cursorColor: K_cursor_text
 !URxvt.borderColor:
-URxvt.borderLess: true
+!URxvt.borderLess: true
 URxvt.colorBD: K_red
 URxvt.colorIT: K_yellow
 URxvt.colorUL: K_magenta
 URxvt.iconFile: /usr/share/icons/Square-Beam/apps/scalable/xterm-color.svg
-URxvt.geometry: 80x25
+!URxvt.geometry: 80x25
 URxvt.visualBell: false
 URxvt.cursorBlink: true
 URxvt.scrollBar: true
