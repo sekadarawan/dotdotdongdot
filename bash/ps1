@@ -1,0 +1,1 @@
+ PS1="\[$(tput setaf 1)$(tput rev)\]\356\202\260\u \342\230\230\[$(tput sgr0)\]\[$(tput setaf 1)\]\356\202\260\[$(tput setaf 2)$(tput rev)\]\356\202\260\W \342\230\257\[$(tput sgr0)\]\[$(tput setaf 2)\]\356\202\260\[$(tput sgr0)\] "
