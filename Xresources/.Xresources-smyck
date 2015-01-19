@@ -99,8 +99,8 @@ URxvt.saveLines: 4096
 URxvt.termName: rxvt-unicode-256color
 URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
-URxvt.font: xft:DejaVu Sans Mono:antialias=false:size=10
-URxvt.boldFont: xft:DejaVu Sans Mono:bold:antialias=false:size=10
+URxvt.font: xft:DejaVu Sans Mono for Powerline:antialias=false:size=10
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:antialias=false:size=10
 !URxvt.italicFont:
 !URxvt.boldItalicFont:
 !URxvt.inputMethod:
