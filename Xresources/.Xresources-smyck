@@ -66,11 +66,12 @@ XTerm*metaSendEscape: true
 XTerm*saveLines: 4096
 XTerm*scrollBar: true
 XTerm*thickness: 3
-XTerm*faceName: DejaVu Sans Mono:size=10:antialias=false
-XTerm*faceNameDoubleSize: DejaVu Sans Mono:size=10:antialias=false
+XTerm*faceName: DejaVu Sans Mono for Powerline:size=10:antialias=false
+XTerm*faceNameDoubleSize: DejaVu Sans Mono for Powerline:size=10:antialias=false
 XTerm*VT100.geometry: 80x25
 XTerm*VT100.allowBoldFont: true
 XTerm*VT100.allowScrollLock: true
+XTerm*VT100.colorMode: true
 
 !URxvt
 !URxvt.depth: 32
