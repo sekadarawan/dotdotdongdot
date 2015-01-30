@@ -29,6 +29,7 @@
 ;;(setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-lisp-implementations
       '((sbcl ("sbcl"))
+	(cmucl ("lisp"))
 	(ecl ("ecl") :coding-system utf-8-unix)))
 (add-to-list 'slime-contribs 'slime-fancy)
 
