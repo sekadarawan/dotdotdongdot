@@ -15,6 +15,7 @@ set fillchars+=stl:\ ,stlnc:\
 set et
 set ts=4
 set sw=4
+set sts=4
 set number
 set laststatus=2
 set encoding=utf-8
