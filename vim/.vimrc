@@ -25,6 +25,14 @@ set shortmess+=I
 set noshowmode
 set gfn=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 set guioptions-=T
+set autoread
+set clipboard+=unnamed
+set splitbelow
+set splitright
+set visualbell
+set wildmenu
+set lazyredraw
+set showmatch
 
 set background=dark
 colorscheme smyck
