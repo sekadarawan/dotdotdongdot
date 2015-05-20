@@ -11,7 +11,7 @@ set smartcase
 set ignorecase
 set nowrap
 set backspace=indent,eol,start
-set fillchars+=stl:\ ,stlnc:\
+set fillchars+=stl:\ ,stlnc:=
 set et
 set ts=4
 set sw=4
