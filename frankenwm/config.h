@@ -80,6 +80,14 @@ static const char *mute[]       = { "amixer", "set",
                                     NULL
                                   };
 static const char *scrpcmd[]    = { "st", "-t", "scratchpad", NULL };
+static const char *shotfull[]   = { "scrot", "-q", "80",
+                                    "~/Pictures/Scrots/%%Y-%%m-%%d-%%H-%%M-%%S.jpg",
+                                    NULL
+                                  };
+static const char *shotwindow[] = { "scrot", "-q", "80", "-u",
+                                    "~/Pictures/Scrots/%%Y-%%m-%%d-%%H-%%M-%%S.jpg",
+                                    NULL
+                                  };
 
 #define DESKTOPCHANGE(K,N) \
     {  MOD4,             K,              change_desktop, {.i = N}}, \
@@ -196,6 +204,10 @@ static key keys[] = {
     {  0,                0x1008ff13,    spawn,             {.com = volumeup}},
     {  0,                0x1008ff11,    spawn,             {.com = volumedown}},
     {  0,                0x1008ff12,    spawn,             {.com = mute}},
+
+    /* screen shot */
+    {  0,                XK_Print,      spawn,             {.com = shotfull}},
+    {  MOD4,             XK_Print,      spawn,             {.com = shotwindow}},
 };
 
 /* EDIT THIS: mouse-based shortcuts */
