@@ -40,6 +40,7 @@ case $session in
   bspwm		) excl bspwm;;
   cwm		) excl cwm;;
   dwm		) excl dwm;;
+  frankenwm ) excl frankenwm;;
   i3		) excl i3;;
   monster	) excl monsterwm;;
   openbox	) excl openbox-session;;
