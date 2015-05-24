@@ -25,7 +25,7 @@
 #define DESKTOPS        10        /* number of desktops - edit DESKTOPCHANGE keys to suit */
 #define DEFAULT_DESKTOP 0         /* the desktop to focus on exec */
 #define MINWSZ          50        /* minimum window size in pixels */
-#define USELESSGAP      8         /* the size of the useless gap in pixels */
+#define USELESSGAP      6         /* the size of the useless gap in pixels */
 #define GLOBALGAPS      True      /* use the same gap size on all desktops */
 #define MONOCLE_BORDERS False     /* display borders in monocle mode */
 #define INVERT          False     /* use alternative modes by default */
@@ -61,16 +61,25 @@ static const AppRule rules[] = { \
  * window. The title of the scratchpad window should also match SCRPDNAME from
  * above
  */
-static const char *termcmd[]  = { "st",     NULL };
-static const char *menucmd[]  = { "dmenu_run", "-i",
-                                  "-nb", "#", "-nf", "#",
-                                  "-sb", "#", "-sf", "#",
-                                  NULL
-                                };
-static const char *volupcmd[] = {"amixer", "set", "Master", "5+", NULL };
-static const char *vollocmd[] = {"amixer", "set", "Master", "5-", NULL };
-static const char *voltgcmd[] = {"amixer", "set", "Master", "toggle", NULL };
-static const char *scrpcmd[]  = { "st", "-t", "scratchpad", NULL };
+static const char *termcmd[]    = { "st", NULL };
+static const char *menucmd[]    = { "dmenu_run", "-i",
+                                    "-nb", "#444444",
+                                    "-sb", "#b84131",
+                                    NULL
+                                  };
+static const char *volumeup[]   = { "amixer", "set",
+                                    "Master", "5+",
+                                    NULL
+                                  };
+static const char *volumedown[] = { "amixer", "set",
+                                    "Master", "5-",
+                                    NULL
+                                  };
+static const char *mute[]       = { "amixer", "set",
+                                    "Master", "toggle",
+                                    NULL
+                                  };
+static const char *scrpcmd[]    = { "st", "-t", "scratchpad", NULL };
 
 #define DESKTOPCHANGE(K,N) \
     {  MOD4,             K,              change_desktop, {.i = N}}, \
@@ -182,6 +191,11 @@ static key keys[] = {
 
     /* exit */
     {  MOD4|CONTROL,     XK_q,          quit,              {.i = 0}},
+
+    /* multimedia keys */
+    {  0,                0x1008ff13,    spawn,             {.com = volumeup}},
+    {  0,                0x1008ff11,    spawn,             {.com = volumedown}},
+    {  0,                0x1008ff12,    spawn,             {.com = mute}},
 };
 
 /* EDIT THIS: mouse-based shortcuts */
