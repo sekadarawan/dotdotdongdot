@@ -22,7 +22,7 @@
 #define BORDER_WIDTH    2         /* window border width */
 #define FOCUS           "#720511" /* focused window border color   */
 #define UNFOCUS         "#ef5d64" /* unfocused window border color */
-#define DESKTOPS        10        /* number of desktops - edit DESKTOPCHANGE keys to suit */
+#define DESKTOPS        5         /* number of desktops - edit DESKTOPCHANGE keys to suit */
 #define DEFAULT_DESKTOP 0         /* the desktop to focus on exec */
 #define MINWSZ          50        /* minimum window size in pixels */
 #define USELESSGAP      6         /* the size of the useless gap in pixels */
@@ -31,7 +31,7 @@
 #define INVERT          False     /* use alternative modes by default */
 #define AUTOCENTER      True      /* automatically center windows floating by default */
 #define OUTPUT_TITLE    False     /* output the title of the currently active window */
-#define USE_SCRATCHPAD  False     /* enable the scratchpad functionality */
+#define USE_SCRATCHPAD  True      /* enable the scratchpad functionality */
 #define SCRPDNAME       "scratchpad" /* the name of the scratchpad window */
 
 /*
@@ -81,11 +81,11 @@ static const char *mute[]       = { "amixer", "set",
                                   };
 static const char *scrpcmd[]    = { "st", "-t", "scratchpad", NULL };
 static const char *shotfull[]   = { "scrot", "-q", "80",
-                                    "~/Pictures/Scrots/%%Y-%%m-%%d-%%H-%%M-%%S.jpg",
+                                    "/home/sekadar_awan/Pictures/Scrots/%Y-%m-%d-%H-%M-%S.jpg",
                                     NULL
                                   };
 static const char *shotwindow[] = { "scrot", "-q", "80", "-u",
-                                    "~/Pictures/Scrots/%%Y-%%m-%%d-%%H-%%M-%%S.jpg",
+                                    "/home/sekadar_awan/Pictures/Scrots/%Y-%m-%d-%H-%M-%S.jpg",
                                     NULL
                                   };
 
@@ -165,11 +165,11 @@ static key keys[] = {
        DESKTOPCHANGE(    XK_3,                             2)
        DESKTOPCHANGE(    XK_4,                             3)
        DESKTOPCHANGE(    XK_5,                             4)
-       DESKTOPCHANGE(    XK_6,                             5)
+    /*   DESKTOPCHANGE(    XK_6,                             5)
        DESKTOPCHANGE(    XK_7,                             6)
        DESKTOPCHANGE(    XK_8,                             7)
        DESKTOPCHANGE(    XK_9,                             8)
-       DESKTOPCHANGE(    XK_0,                             9)
+       DESKTOPCHANGE(    XK_0,                             9) */
     /* toggle to last desktop */
     {  MOD4,             XK_Tab,        last_desktop,      {NULL}},
     /* jump to the next/previous desktop */
