@@ -124,10 +124,11 @@ static Key keys[] = {
     {  0,                XK_Print,      spawn,             {.com = shotfull}},
     {  MOD4,             XK_Print,      spawn,             {.com = shotwindow}},
 
-       DESKTOPCHANGE(    XK_F1,                             0)
-       DESKTOPCHANGE(    XK_F2,                             1)
-       DESKTOPCHANGE(    XK_F3,                             2)
-       DESKTOPCHANGE(    XK_F4,                             3)
+       DESKTOPCHANGE(    XK_1,                             0)
+       DESKTOPCHANGE(    XK_2,                             1)
+       DESKTOPCHANGE(    XK_3,                             2)
+       DESKTOPCHANGE(    XK_4,                             3)
+       DESKTOPCHANGE(    XK_5,                             4)
 };
 
 /**
