@@ -7,6 +7,7 @@ scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
 
 xset -b &
 ~/.config/frankenwm/conkylemon &
+~/.fehbg &
 
 while read -r; do
   [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]
