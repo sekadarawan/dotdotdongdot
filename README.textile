@@ -2,4 +2,4 @@ h1. dotdotdongdot
 
 Dot files collection. (duhh!!)
 
-!assets/franken-lemon.jpg(Franken Lemon)
+!https://raw.githubusercontent.com/sekadarawan/dotdotdongdot/master/assets/franken-lemon.jpg(Franken Lemon)
