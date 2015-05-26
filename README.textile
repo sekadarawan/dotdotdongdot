@@ -7,3 +7,6 @@ h3. Franken Lemon:
 
 h3. Monster Lemon:
 !assets/monster-lemon.jpg(Monster Lemon)!
+
+h3. Monster Dzen:
+!assets/monster-dzen.jpg(Monster Dzen)!
