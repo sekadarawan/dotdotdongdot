@@ -11,6 +11,7 @@ xset -b &
 ~/.config/frankenwm/conkylemon &
 ~/.fehbg &
 wmname LG3D &
+compton -b &
 
 while read -r; do
   [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]

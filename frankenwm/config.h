@@ -47,6 +47,7 @@ static const AppRule rules[] = { \
     /*  class         desktop     follow  float */
     { "GNU Image",       1,      False,  True  },
     { "Inkscape",        1,      False,  True  },
+    { "mpv",             1,      False,  True  },
     { "HexChat",         2,      False,  False },
     { "Mozilla Firefox", 2,      False,  False },
     { "qpdfview",        3,      False,  True  },
