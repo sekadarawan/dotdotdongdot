@@ -4,3 +4,6 @@ Dot files collection. (duhh!!)
 
 h3. Franken Lemon:
 !assets/franken-lemon.jpg(Franken Lemon)!
+
+h3. Monster Lemon:
+!assets/monster-lemon.jpg(Monster Lemon)!
