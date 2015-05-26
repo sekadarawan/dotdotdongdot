@@ -4,5 +4,3 @@ Dot files collection. (duhh!!)
 
 h3. Franken Lemon:
 !assets/franken-lemon.jpg(Franken Lemon)!
-
-!https://raw.githubusercontent.com/sekadarawan/dotdotdongdot/master/assets/franken-lemon.jpg(Franken Lemon)!
