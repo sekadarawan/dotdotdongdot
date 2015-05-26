@@ -51,6 +51,6 @@ while read -r; do
   done
 
   printf "%s%s\n" "${r}" "${i}" && unset r
-done < "${ff}" | lemonbar -p -d -g $(($scrwdth / 5))x18+0+0 -f "Icons:pixelsize=14,DejaVu Sans Mono:pixelsize=12" -u 2 -B "#ff200b0b" &
+done < "${ff}" | lemonbar -p -d -g 300x18+0+0 -f "Icons:pixelsize=14,DejaVu Sans Mono:pixelsize=12" -u 2 -B "#ff200b0b" &
 "${wm}" > "${ff}"
 # vim: ft=sh:syn=sh:ts=2:sw=2:sts=2:et
