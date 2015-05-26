@@ -2,4 +2,4 @@ h1. dotdotdongdot
 
 Dot files collection. (duhh!!)
 
-!assets/franken-lemon.jp(Franken Lemon)
+!assets/franken-lemon.jpg(Franken Lemon)
