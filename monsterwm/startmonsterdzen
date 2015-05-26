@@ -21,11 +21,11 @@ while read -r; do
     IFS=':' read -r d w m c u <<< "${desktop}"
 
     case ${d} in
-      0) dname="" ;;
-      1) dname="" ;;
-      2) dname="" ;;
-      3) dname="" ;;
-      4) dname="" ;;
+      0) dname="" k=1 ;;
+      1) dname="" k=2 ;;
+      2) dname="" k=3 ;;
+      3) dname="" k=4 ;;
+      4) dname="" k=5 ;;
     esac
 
     if ((c)) ; then
@@ -46,9 +46,9 @@ while read -r; do
     ((u)) && b="#ff0000"
 
     if ((w)) ; then
-      r+="^ca(1, xdotool key alt+$((${d} + 1)))^bg(${b}) ${dname} ^fn(${fnt})(${w})^fn() ^bg()^ca()"
+      r+="^ca(1, xdotool key alt+${k})^bg(${b}) ${dname} ^fn(${fnt})(${w})^fn() ^bg()^ca()"
     else
-      r+="^ca(1, xdotool key alt+$((${d} + 1)))^bg(${b}) ${dname} ^bg()^ca()"
+      r+="^ca(1, xdotool key alt+${k})^bg(${b}) ${dname} ^bg()^ca()"
     fi
   done
 
