@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+wm="monsterwm"
+ff="/tmp/${wm}.fifo"
+fnt="DejaVu Sans Mono:pixelsize=12:antialias=false"
+[ ! -p "${ff}" ] && mkfifo -m 600 "${ff}"
+scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
+XDG_CURRENT_DESKTOP="gnome"
+export XDG_CURRENT_DESKTOP
+
+xset -b &
+~/.config/scripts/conkydzen &
+~/.fehbg &
+wmname LG3D &
+compton -b &
+
+while read -r; do
+  [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]
+  read -ra desktops <<< "${REPLY}" || continue
+  for desktop in "${desktops[@]}"; do
+    IFS=':' read -r d w m c u <<< "${desktop}"
+
+    case ${d} in
+      0) dname="" ;;
+      1) dname="" ;;
+      2) dname="" ;;
+      3) dname="" ;;
+      4) dname="" ;;
+    esac
+
+    if ((c)) ; then
+      b="#750b0b"
+      ul="#2d3b06"
+
+      case ${m} in
+        0) i="[t]" ;;
+        1) i="[m]" ;;
+        2) i="[b]" ;;
+        3) i="[g]" ;;
+      esac
+    else
+      b="#200b0b"
+      ul="#200b0b"
+    fi
+
+    ((u)) && b="#ff0000"
+
+    if ((w)) ; then
+      r+="^ca(1, xdotool key alt+$((${d} + 1)))^bg(${b}) ${dname} ^fn(${fnt})(${w})^fn() ^bg()^ca()"
+    else
+      r+="^ca(1, xdotool key alt+$((${d} + 1)))^bg(${b}) ${dname} ^bg()^ca()"
+    fi
+  done
+
+  printf "%s%s\n" "${r}" "^fn(${fnt})${i}^fn()" && unset r
+done < "${ff}" | dzen2 -ta l -p -w 300 -h 18 -x 0 -y 0 -fn "Icons:pixelsize=14:antialias=false" -bg "#200b0b" -fg "#ffffff" &
+"${wm}" > "${ff}"
+# vim: ft=sh:syn=sh:ts=2:sw=2:sts=2:et

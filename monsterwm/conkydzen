@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
+xplace=$((${scrwdth} - 300))
+conky -c ~/.config/scripts/conkydzenrc | dzen2 -p -w 300 -h 18 -x ${xplace} -y 0 -fn "Icons:pixelsize=14:antialias=false" -bg "#200b0b" -fg "#ffffff" -ta r &
+# vim: ft=sh:syn=sh:ts=2:sw=2:sts=2:et
