@@ -44,9 +44,12 @@
  * you do not wish to use this functionality.
  */
 static const AppRule rules[] = { \
-    /*  class     desktop  follow  float */
-    { "GNU Image",-1,      False,  True },
-    { "Skype",     3,      False,  True },
+    /*  class         desktop     follow  float */
+    { "GNU Image",       1,      False,  True  },
+    { "Inkscape",        1,      False,  True  },
+    { "HexChat",         2,      False,  False },
+    { "Mozilla Firefox", 2,      False,  False },
+    { "qpdfview",        3,      False,  True  },
 };
 
 /* helper for spawning shell commands, usually you don't edit this */
@@ -63,8 +66,8 @@ static const AppRule rules[] = { \
  */
 static const char *termcmd[]    = { "st", NULL };
 static const char *menucmd[]    = { "dmenu_run", "-i",
-                                    "-nb", "#444444",
-                                    "-sb", "#b84131",
+                                    "-nb", "#200b0b",
+                                    "-sb", "#750b0b",
                                     NULL
                                   };
 static const char *volumeup[]   = { "amixer", "set",

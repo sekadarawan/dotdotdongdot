@@ -4,10 +4,13 @@ wm="frankenwm"
 ff="/tmp/${wm}.fifo"
 [ ! -p "${ff}" ] && mkfifo -m 600 "${ff}"
 scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
+XDG_CURRENT_DESKTOP="gnome"
+export XDG_CURRENT_DESKTOP
 
 xset -b &
 ~/.config/frankenwm/conkylemon &
 ~/.fehbg &
+wmname LG3D &
 
 while read -r; do
   [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]
@@ -23,7 +26,7 @@ while read -r; do
       4) dname="" ;;
     esac
 
-    case ${m} in
+    ((c)) && b="#ff750b0b" ul="#ff2d3b06" && case ${m} in
       0) i="[t]" ;;
       1) i="[b]" ;;
       2) i="[g]" ;;
@@ -31,16 +34,16 @@ while read -r; do
       4) i="[f]" ;;
       5) i="[d]" ;;
       6) i="[e]" ;;
-    esac
+    esac || b="#ff200b0b" ul="#ff200b0b"
 
-    if ((c)) ; then
-      b="#ff750b0b"
-      ul="#ff2d3b06"
-      #ul="#ff8a9be4"
-    else
-      b="#ff200b0b"
-      ul="#ff200b0b"
-    fi
+#    if ((c)) ; then
+#      b="#ff750b0b"
+#      ul="#ff2d3b06"
+#      #ul="#ff8a9be4"
+#    else
+#      b="#ff200b0b"
+#      ul="#ff200b0b"
+#    fi
 
     ((u)) && b="#ffff0000"
 
