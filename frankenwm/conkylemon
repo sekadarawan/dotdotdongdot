@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
+xplace=$((${scrwdth} - 300))
+conky -c ~/.config/frankenwm/conkyrc | lemonbar -p -d -g 300x18+${xplace}+0 -f "Icons:pixelsize=14,DejaVu Sans Mono:pixelsize=12" -u 2 -B "#ff200b0b" &
+#conky -c ~/.config/frankenwm/conkyrc | lemonbar -p -d -g $(($scrwdth - ${xplace}))x18+${xplace}+0 -f "Icons:pixelsize=14,DejaVu Sans Mono:pixelsize=12" -u 2 -B "#ff200b0b" &
+# vim: ft=sh:syn=sh:ts=2:sw=2:sts=2:et

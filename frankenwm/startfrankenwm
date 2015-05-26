@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+wm="frankenwm"
+ff="/tmp/${wm}.fifo"
+[ ! -p "${ff}" ] && mkfifo -m 600 "${ff}"
+scrwdth="$( xwininfo -root | grep Width | sed -E 's/.+ //g' )"
+
+xset -b &
+~/.config/frankenwm/conkylemon &
+
+while read -r; do
+  [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]
+  read -ra desktops <<< "${REPLY}" || continue
+  for desktop in "${desktops[@]}"; do
+    IFS=':' read -r d w m c u <<< "${desktop}"
+
+    case ${d} in
+      0) dname="" ;;
+      1) dname="" ;;
+      2) dname="" ;;
+      3) dname="" ;;
+      4) dname="" ;;
+    esac
+
+    case ${m} in
+      0) i="[t]" ;;
+      1) i="[b]" ;;
+      2) i="[g]" ;;
+      3) i="[m]" ;;
+      4) i="[f]" ;;
+      5) i="[d]" ;;
+      6) i="[e]" ;;
+    esac
+
+    if ((c)) ; then
+      b="#ff750b0b"
+      ul="#ff2d3b06"
+      #ul="#ff8a9be4"
+    else
+      b="#ff200b0b"
+      ul="#ff200b0b"
+    fi
+
+    ((u)) && b="#ffff0000"
+
+    if ((w)) ; then
+      r+="%{B$b}%{U$ul}%{+u} $dname ($w) %{-u}%{U-}%{B-}"
+    else
+      r+="%{B$b}%{U$ul}%{+u} $dname %{-u}%{U-}%{B-}"
+    fi
+  done
+
+  printf "%s%s\n" "${r}" "${i}" && unset r
+done < "${ff}" | lemonbar -p -d -g $(($scrwdth / 5))x18+0+0 -f "Icons:pixelsize=14,DejaVu Sans Mono:pixelsize=12" -u 2 -B "#ff200b0b" &
+"${wm}" > "${ff}"
+# vim: ft=sh:syn=sh:ts=2:sw=2:sts=2:et

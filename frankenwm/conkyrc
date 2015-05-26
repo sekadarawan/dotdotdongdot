@@ -1,0 +1,12 @@
+background no
+out_to_x no
+out_to_console yes
+update_interval 1.0
+total_run_times 0
+use_spacer none
+short_units yes
+cpu_avg_samples 1
+net_avg_samples 1
+
+TEXT
+%{r} ${downspeed ppp0}  ${upspeed ppp0}  $acpitemp°C  $uptime  ${time %H:%M} %{r}
