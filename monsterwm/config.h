@@ -39,7 +39,10 @@ static const AppRule rules[] = { \
     { "mpv",             1,      False,  True  },
     { "HexChat",         2,      False,  False },
     { "Firefox",         2,      False,  False },
+    { "Transmission-gtk",2,      False,  False },
     { "qpdfview",        3,      False,  True  },
+    { "Emacs",           4,      False,  False },
+    { "Gvim",            4,      False,  False },
 };
 
 /* helper for spawning shell commands */

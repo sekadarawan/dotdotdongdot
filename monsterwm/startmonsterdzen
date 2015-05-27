@@ -14,6 +14,14 @@ xset -b &
 wmname LG3D &
 compton -b &
 
+on_exit() {
+  for child in $(jobs -p) ; do
+    jobs -p | grep -q ${child} && kill ${child}
+  done
+}
+
+trap on_exit EXIT SIGHUP SIGINT SIGTERM
+
 while read -r; do
   [[ "${REPLY}" =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+$ ]]
   read -ra desktops <<< "${REPLY}" || continue
@@ -30,7 +38,6 @@ while read -r; do
 
     if ((c)) ; then
       b="#750b0b"
-      ul="#2d3b06"
 
       case ${m} in
         0) i="[t]" ;;
@@ -40,7 +47,6 @@ while read -r; do
       esac
     else
       b="#200b0b"
-      ul="#200b0b"
     fi
 
     ((u)) && b="#ff0000"
