@@ -9,4 +9,8 @@ cpu_avg_samples 1
 net_avg_samples 1
 
 TEXT
- ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${downspeed ppp0}^fn()  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${upspeed ppp0}^fn()  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)$acpitemp°C^fn()  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)$uptime^fn()  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${time %H:%M}^fn() 
+  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${if_up ppp0}${downspeed ppp0}${endif}^fn()\
+  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${if_up ppp0}${upspeed ppp0}${endif}^fn()\
+  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)$acpitemp°C^fn()\
+  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)$uptime^fn()\
+  ^fn(DejaVu Sans Mono:pixelsize=12:antialias=false)${time %H:%M}^fn() 

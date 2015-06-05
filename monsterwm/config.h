@@ -34,15 +34,16 @@
  */
 static const AppRule rules[] = { \
     /*  class     desktop  follow  float */
-    { "Gimp",            1,      False,  True  },
-    { "Inkscape",        1,      False,  True  },
-    { "mpv",             1,      False,  True  },
-    { "HexChat",         2,      False,  False },
-    { "Firefox",         2,      False,  False },
-    { "Transmission-gtk",2,      False,  False },
-    { "qpdfview",        3,      False,  True  },
-    { "Emacs",           4,      False,  False },
-    { "Gvim",            4,      False,  False },
+    { "qpdfview",        1,      False,  False  },
+    { "Emacs",           2,      False,  False },
+    { "Gvim",            2,      False,  False },
+    { "Gimp",            3,      False,  True  },
+    { "Inkscape",        3,      False,  True  },
+    { "mpv",             3,      False,  True  },
+    { "HexChat",         4,      False,  False },
+    { "Firefox",         4,      False,  False },
+    { "Transmission-gtk",4,      False,  False },
+
 };
 
 /* helper for spawning shell commands */

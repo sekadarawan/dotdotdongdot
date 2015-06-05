@@ -30,10 +30,10 @@ while read -r; do
 
     case ${d} in
       0) dname="" kunci=1 ;;
-      1) dname="" kunci=2 ;;
-      2) dname="" kunci=3 ;;
-      3) dname="" kunci=4 ;;
-      4) dname="" kunci=5 ;;
+      1) dname="" kunci=2 ;; # Belajar
+      2) dname="" kunci=3 ;; # ngod
+      3) dname="" kunci=4 ;; # media
+      4) dname="" kunci=5 ;; # net
     esac
 
     if ((c)) ; then
