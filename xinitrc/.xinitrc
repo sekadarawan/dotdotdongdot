@@ -21,33 +21,35 @@ fi
 
 xsetroot -cursor_name left_ptr &
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
-# exec $CK_LAUNCH_SESSION stumpwm
+BACKLIGHT=$( xbacklight )
+if [ ${BACKLIGHT%%.*} -eq 100 ]; then
+    xbacklight -dec 80
+fi
 
 session=${1:-openbox}
 
 excl() {
-#  exec $CK_LAUNCH_SESSION $1
    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session $1
 }
 
 case $session in
-  alopex	) excl alopex;;
-  awesome	) excl aswesom;;
-  bspwm		) excl bspwm;;
-  cwm		) excl cwm;;
-  dwm		) excl dwm;;
-  frankenwm ) excl startfrankenwm;;
-  i3		) excl i3;;
-  monster	) excl monsterwm;;
-  openbox	) excl openbox-session;;
-  qtile		) excl qtile;;
-  subtle	) excl subtle;;
-  stumpwm	) excl stumpwm;;
-  wingo		) excl wingo;;
-  xmonad	) excl xmonad;;
+  alopex	  ) excl alopex;;
+  awesome	  ) excl aswesom;;
+  bspwm		  ) excl bspwm;;
+  cwm		  ) excl cwm;;
+  dwm		  ) excl dwm;;
+  frankendzen ) excl startfrankendzen;;
+  frankenwm   ) excl startfrankenwm;;
+  i3		  ) excl i3;;
+  monster	  ) excl startmonsterwm;;
+  monsterdzen ) excl startmonsterdzen;;
+  openbox	  ) excl openbox-session;;
+  qtile		  ) excl qtile;;
+  subtle	  ) excl subtle;;
+  stumpwm	  ) excl stumpwm;;
+  wingo		  ) excl wingo;;
+  xmonad	  ) excl xmonad;;
   *) excl $1;;
 esac
+
+# vim: ft=sh:syn=sh:ts=4:sw=2:sts=2:et
