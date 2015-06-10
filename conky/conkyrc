@@ -1,0 +1,54 @@
+background no
+use_xft yes
+xftfont DejaVu Sans Mono for Powerline:pixelsize=11
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 150 1
+maximum_width 600
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color Black
+default_shade_color 000000
+default_outline_color d9d7d6
+alignment br
+gap_x 5
+gap_y 5
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale yes
+use_spacer none
+
+TEXT
+${color #f7f7f7}${hr 3}
+${font Icons}${color #7da900}${font}${alignr}${color #f7f7f7}${upspeed ppp0}${color}
+${font Icons}${color #7da900}${font}${alignr}${color #f7f7f7}${downspeed ppp0}${color}
+${color #f7f7f7}${hr 1}
+${font Icons}${color #7da900}${font}${alignr}${color #800000}${cpubar cpu0 7,100}${color}
+${font Icons}${color #7da900}${font}${alignr}${color #f7f7f7}$acpitemp${color}
+${color #f7f7f7}${hr 1}
+${font Icons}${color #7da900}${font}${alignr}${color #800000}${membar 7,100}${color}
+${font Icons}${color #7da900}${font}${alignr}${color #800000}${swapbar 7,100}${color}
+${font Icons}${color #7da900}${font}${alignr}${color #800000}${fs_bar 7,100}${color}
+${font Icons}${color #7da900}${font}${alignr}${color #800000}${fs_bar_free 7,100}${color}
+${color #f7f7f7}${hr 1}
+${font Icons:pixelsize=15}${alignr}${color #7da900}${font}${color}
+${if_mpd_playing}
+${alignr}${color #f7f7f7}${scroll 16 $mpd_artist - $mpd_album - $mpd_title}${color}
+${alignr}${color #800000}${mpd_bar 7,100}${color}
+${endif}
+${alignr}${color #f7f7f7}$mpd_status
+${color #f7f7f7}${hr 1}
+${font Icons}${color #7da900}${font}${alignr}${color #f7f7f7}${uptime_short}${color}
+
+${font Icons:pixelsize=30}${alignc}${color #0f8000}${font}${color}
+
+${color #f7f7f7}${hr 1}
