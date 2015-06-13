@@ -22,6 +22,7 @@ export JAVA_FONTS=/usr/share/fonts/TTF
 export EDITOR=/usr/bin/nano
 if [ -e /usr/bin/ruby ]; then
   export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+  export PATH=${PATH}:${GEM_HOME}/bin
 fi
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -37,7 +38,7 @@ sudo pacman -Suu'
 
 # ex - archive extractor
 # usage: ex <file>
-ex ()
+extract ()
 {
   if [ -f $1 ] ; then
     case $1 in
